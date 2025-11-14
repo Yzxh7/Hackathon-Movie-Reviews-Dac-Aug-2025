@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --bg: #f0f2f5;
+  --card-bg: #ffffff;
+  --text: #111;
+}
+
+.dark {
+  --bg: #0d1117;
+  --card-bg: #161b22;
+  --text: #e6edf3;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* card */
+.signup-card {
+  background: var(--card-bg);
+  color: var(--text);
+  transition: background 0.4s ease, color 0.4s ease;
+}
