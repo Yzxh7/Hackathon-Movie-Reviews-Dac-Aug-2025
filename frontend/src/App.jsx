@@ -7,6 +7,9 @@ import MyReviews from "./pages/MyReviews";
 import SharedReviews from "./pages/SharedReviews";
 import Navbar from "./components/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
+import EditProfile from "./pages/EditProfile";
+import ChangePassword from "./pages/ChangePassword";
+
 
 function App() {
   return (
@@ -20,7 +23,7 @@ function App() {
   <Route path="/login" element={<Login />} />
   <Route path="/signup" element={<Signup />} />
 
-  {/* ⭐ PROTECTED ROUTES */}
+  {/* PROTECTED ROUTES */}
   <Route
     path="/"
     element={
@@ -56,6 +59,25 @@ function App() {
       </ProtectedRoute>
     }
   />
+  <Route
+  path="/edit-profile"
+  element={
+    <ProtectedRoute>
+      <EditProfile />
+    </ProtectedRoute>
+  }
+/>
+
+<Route
+  path="/change-password"
+  element={
+    <ProtectedRoute>
+      <ChangePassword />
+    </ProtectedRoute>
+  }
+/>
+
+
 
 </Routes>
 
